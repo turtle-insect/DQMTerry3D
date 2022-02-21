@@ -13,6 +13,7 @@ namespace DQMTerry3D
 		public ObservableCollection<Item> Items { get; private set; } = new ObservableCollection<Item>();
 		private ObservableCollection<Item> AllItems = new ObservableCollection<Item>();
 		public ObservableCollection<Monster> Monsters { get; private set; } = new ObservableCollection<Monster>();
+		public ObservableCollection<Egg> Eggs { get; private set; } = new ObservableCollection<Egg>();
 
 		public ViewModel()
 		{
@@ -24,11 +25,18 @@ namespace DQMTerry3D
 
 			for (uint index = 0; index < 500; index++)
 			{
-				uint address = 0x328 + index * 244;
-				uint id = SaveData.Instance().ReadNumber(address, 4);
-				if (id == 0) continue;
+				Monster monster = new Monster(0x328 + index * 244);
+				if (monster.Type == 0) continue;
 
-				Monsters.Add(new Monster(address));
+				Monsters.Add(monster);
+			}
+
+			for (uint index = 0; index < 2; index++)
+			{
+				Egg egg = new Egg(0x1E620 + index * 8);
+				if (egg.Type == 0) continue;
+
+				Eggs.Add(egg);
 			}
 		}
 

@@ -74,6 +74,14 @@ namespace DQMTerry3D
 			monster.Type = Choice(ChoiceWindow.eType.eType, monster.Type);
 		}
 
+		private void ButtonChoiceEggType_Click(object sender, RoutedEventArgs e)
+		{
+			var egg = (sender as Button)?.DataContext as Egg;
+			if (egg == null) return;
+
+			egg.Type = Choice(ChoiceWindow.eType.eType, egg.Type);
+		}
+
 		private void ButtonChoiceMonsterSkill1_Click(object sender, RoutedEventArgs e)
 		{
 			var monster = (sender as Button)?.DataContext as Monster;
