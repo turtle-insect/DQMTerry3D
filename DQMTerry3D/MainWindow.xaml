@@ -206,7 +206,6 @@
 								<StackPanel Orientation="Horizontal">
 									<Label Content="Count"/>
 									<TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="40"/>
-									<Button Content=" ... "/>
 									<Label Content="{Binding ID, Converter={StaticResource ItemIDConverter}}"/>
 								</StackPanel>
 							</DataTemplate>

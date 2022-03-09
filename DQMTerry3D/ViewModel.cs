@@ -11,7 +11,7 @@ namespace DQMTerry3D
 	{
 		public String ItemFilter { get; set; } = "";
 		public ObservableCollection<Item> Items { get; private set; } = new ObservableCollection<Item>();
-		private ObservableCollection<Item> AllItems = new ObservableCollection<Item>();
+		private List<Item> AllItems = new List<Item>();
 		public ObservableCollection<Monster> Monsters { get; private set; } = new ObservableCollection<Monster>();
 		public ObservableCollection<Egg> Eggs { get; private set; } = new ObservableCollection<Egg>();
 
