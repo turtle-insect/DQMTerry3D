@@ -68,10 +68,10 @@ namespace DQMTerry3D
 
 		private void ButtonChoiceMonsterType_Click(object sender, RoutedEventArgs e)
 		{
-			var monster = (sender as Button)?.DataContext as Monster;
-			if (monster == null) return;
+			var number = (sender as Button)?.DataContext as Number;
+			if (number == null) return;
 
-			monster.Type = Choice(ChoiceWindow.eType.eType, monster.Type);
+			number.Value = Choice(ChoiceWindow.eType.eType, number.Value);
 		}
 
 		private void ButtonChoiceEggType_Click(object sender, RoutedEventArgs e)
@@ -82,28 +82,12 @@ namespace DQMTerry3D
 			egg.Type = Choice(ChoiceWindow.eType.eType, egg.Type);
 		}
 
-		private void ButtonChoiceMonsterSkill1_Click(object sender, RoutedEventArgs e)
+		private void ButtonChoiceMonsterSkill_Click(object sender, RoutedEventArgs e)
 		{
-			var monster = (sender as Button)?.DataContext as Monster;
-			if (monster == null) return;
+			var number = (sender as Button)?.DataContext as Number;
+			if (number == null) return;
 
-			monster.Skill1 = Choice(ChoiceWindow.eType.eSkill, monster.Skill1);
-		}
-
-		private void ButtonChoiceMonsterSkill2_Click(object sender, RoutedEventArgs e)
-		{
-			var monster = (sender as Button)?.DataContext as Monster;
-			if (monster == null) return;
-
-			monster.Skill2 = Choice(ChoiceWindow.eType.eSkill, monster.Skill2);
-		}
-
-		private void ButtonChoiceMonsterSkill3_Click(object sender, RoutedEventArgs e)
-		{
-			var monster = (sender as Button)?.DataContext as Monster;
-			if (monster == null) return;
-
-			monster.Skill3 = Choice(ChoiceWindow.eType.eSkill, monster.Skill3);
+			number.Value = Choice(ChoiceWindow.eType.eSkill, number.Value);
 		}
 
 		private void FileOpen(bool force)
