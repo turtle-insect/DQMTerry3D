@@ -41,7 +41,19 @@
 					<Grid.RowDefinitions>
 						<RowDefinition/>
 						<RowDefinition/>
-						<RowDefinition Height="14*"/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition/>
+						<RowDefinition Height="2*"/>
 					</Grid.RowDefinitions>
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition/>
@@ -54,6 +66,18 @@
 					<TextBox Grid.Column="1" Text="{Binding Money, UpdateSourceTrigger=PropertyChanged}"/>
 					<Label Grid.Row="1" Content="Bank"/>
 					<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Bank, UpdateSourceTrigger=PropertyChanged}"/>
+					<Label Grid.Row="3" Content="Mini Medal (have)"/>
+					<TextBox Grid.Row="3" Grid.Column="1" Text="{Binding MiniMedalHave, UpdateSourceTrigger=PropertyChanged}"/>
+					<Label Grid.Row="4" Content="Mini Medal (pass)"/>
+					<TextBox Grid.Row="4" Grid.Column="1" Text="{Binding MiniMedalPass, UpdateSourceTrigger=PropertyChanged}"/>
+					<Label Grid.Row="5" Content="Battle Win"/>
+					<TextBox Grid.Row="5" Grid.Column="1" Text="{Binding BattleWin, UpdateSourceTrigger=PropertyChanged}"/>
+					<Label Grid.Row="6" Content="Scout"/>
+					<TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Scout, UpdateSourceTrigger=PropertyChanged}"/>
+					<Label Grid.Row="7" Content="Mix"/>
+					<TextBox Grid.Row="7" Grid.Column="1" Text="{Binding Mix, UpdateSourceTrigger=PropertyChanged}"/>
+					<Label Grid.Row="8" Content="Tournament"/>
+					<TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Tournament, UpdateSourceTrigger=PropertyChanged}"/>
 				</Grid>
 			</TabItem>
 			<TabItem Header="Monster">

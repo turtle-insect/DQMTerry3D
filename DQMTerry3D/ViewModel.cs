@@ -61,5 +61,41 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(0xE0, 4); }
 			set { Util.WriteNumber(0xE0, 4, value, 0, 99999999); }
 		}
+
+		public uint MiniMedalHave
+		{
+			get { return SaveData.Instance().ReadNumber(0x1E580, 1); }
+			set { Util.WriteNumber(0x1E580, 1, value, 0, 0xFF); }
+		}
+
+		public uint MiniMedalPass
+		{
+			get { return SaveData.Instance().ReadNumber(0x1E581, 2); }
+			set { Util.WriteNumber(0x1E581, 2, value, 0, 150); }
+		}
+
+		public uint BattleWin
+		{
+			get { return SaveData.Instance().ReadNumber(0x318, 2); }
+			set { SaveData.Instance().WriteNumber(0x318, 2, value); }
+		}
+
+		public uint Scout
+		{
+			get { return SaveData.Instance().ReadNumber(0x31A, 2); }
+			set { SaveData.Instance().WriteNumber(0x31A, 2, value); }
+		}
+
+		public uint Mix
+		{
+			get { return SaveData.Instance().ReadNumber(0x31C, 2); }
+			set { SaveData.Instance().WriteNumber(0x31C, 2, value); }
+		}
+
+		public uint Tournament
+		{
+			get { return SaveData.Instance().ReadNumber(0x1E564, 2); }
+			set { SaveData.Instance().WriteNumber(0x1E564, 2, value); }
+		}
 	}
 }
