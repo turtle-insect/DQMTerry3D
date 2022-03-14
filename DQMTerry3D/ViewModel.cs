@@ -14,6 +14,7 @@ namespace DQMTerry3D
 		private List<Item> AllItems = new List<Item>();
 		public ObservableCollection<Monster> Monsters { get; private set; } = new ObservableCollection<Monster>();
 		public ObservableCollection<Egg> Eggs { get; private set; } = new ObservableCollection<Egg>();
+		public ObservableCollection<Memory> Memorys { get; private set; } = new ObservableCollection<Memory>();
 
 		public ViewModel()
 		{
@@ -37,6 +38,12 @@ namespace DQMTerry3D
 				if (egg.Type == 0) continue;
 
 				Eggs.Add(egg);
+			}
+
+			for (uint index = 0; index < 2; index++)
+			{
+				Memory memory = new Memory(0x30422 + index * 1336);
+				Memorys.Add(memory);
 			}
 		}
 

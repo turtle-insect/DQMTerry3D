@@ -284,6 +284,151 @@
 					</ListBox>
 				</DockPanel>
 			</TabItem>
+			<TabItem Header="Memory">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="200"/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<DockPanel>
+						<ComboBox Name="ComboBoxMemory" DockPanel.Dock="Top" ItemsSource="{Binding Memorys}"/>
+						<ListBox x:Name="ListBoxMemory" ItemsSource="{Binding ElementName=ComboBoxMemory, Path=SelectedItem.Monsters}"/>
+					</DockPanel>
+					<Grid Grid.Column="1">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition/>
+							<ColumnDefinition/>
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+							<RowDefinition/>
+						</Grid.RowDefinitions>
+						<Label  Content="Type"/>
+						<StackPanel Grid.Column="1" Orientation="Horizontal">
+							<Button Content=" ... " DataContext="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Type}" Click="ButtonChoiceMonsterType_Click"/>
+							<Label Grid.Column="1" Content="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Type.Value, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource MonsterTypeConverter}}"/>
+						</StackPanel>
+						<Label Grid.Row="2" Content="Lv"/>
+						<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Lv, UpdateSourceTrigger=PropertyChanged}"/>
+						<Label Grid.Row="3" Content="Exp"/>
+						<TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Exp, UpdateSourceTrigger=PropertyChanged}"/>
+						<Label Grid.Row="4" Content="MaxHP"/>
+						<TextBox Grid.Row="4" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.MaxHP, UpdateSourceTrigger=PropertyChanged}"/>
+						<Label Grid.Row="5" Content="HP"/>
+						<TextBox Grid.Row="5" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.HP, UpdateSourceTrigger=PropertyChanged}"/>
+						<Label Grid.Row="6" Content="MaxMP"/>
+						<TextBox Grid.Row="6" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.MaxMP, UpdateSourceTrigger=PropertyChanged}"/>
+						<Label Grid.Row="7" Content="MP"/>
+						<TextBox Grid.Row="7" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.MP, UpdateSourceTrigger=PropertyChanged}"/>
+						<Label Grid.Row="8" Content="Offense"/>
+						<TextBox Grid.Row="8" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Offense, UpdateSourceTrigger=PropertyChanged}"/>
+						<Label Grid.Row="9" Content="Defense"/>
+						<TextBox Grid.Row="9" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Defense, UpdateSourceTrigger=PropertyChanged}"/>
+						<Label Grid.Row="10" Content="Speed"/>
+						<TextBox Grid.Row="10" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Speed, UpdateSourceTrigger=PropertyChanged}"/>
+						<Label Grid.Row="11" Content="Wise"/>
+						<TextBox Grid.Row="11" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Wise, UpdateSourceTrigger=PropertyChanged}"/>
+						<Label Grid.Row="12" Content="SkillPoint"/>
+						<TextBox Grid.Row="12" Grid.Column="1" Text="{Binding ElementName=ListBoxMemory, Path=SelectedItem.SkillPoint, UpdateSourceTrigger=PropertyChanged}"/>
+					</Grid>
+					<TabControl Grid.Column="2">
+						<TabItem Header="Skill">
+							<TabItem.Resources>
+								<local:SkillIDConverter x:Key="SkillIDConverter"/>
+							</TabItem.Resources>
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="100"/>
+									<ColumnDefinition/>
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+									<RowDefinition/>
+									<RowDefinition/>
+									<RowDefinition/>
+									<RowDefinition Height="12*"/>
+								</Grid.RowDefinitions>
+								<Label Content="Skill"/>
+								<StackPanel Grid.Column="1" Orientation="Horizontal">
+									<Button Content=" ... " DataContext="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Skill1}" Click="ButtonChoiceMonsterSkill_Click"/>
+									<Label Content="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Skill1.Value, Converter={StaticResource SkillIDConverter}}"/>
+								</StackPanel>
+								<Label Grid.Row="1" Content="Skill"/>
+								<StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+									<Button Content=" ... " DataContext="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Skill2}" Click="ButtonChoiceMonsterSkill_Click"/>
+									<Label Content="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Skill2.Value, Converter={StaticResource SkillIDConverter}}"/>
+								</StackPanel>
+								<Label Grid.Row="2" Content="Skill"/>
+								<StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+									<Button Content=" ... " DataContext="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Skill3}" Click="ButtonChoiceMonsterSkill_Click"/>
+									<Label Content="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Skill3.Value, Converter={StaticResource SkillIDConverter}}"/>
+								</StackPanel>
+							</Grid>
+						</TabItem>
+						<TabItem Header="Family Tree">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="100"/>
+									<ColumnDefinition/>
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+									<RowDefinition/>
+									<RowDefinition/>
+									<RowDefinition/>
+									<RowDefinition/>
+									<RowDefinition/>
+									<RowDefinition/>
+									<RowDefinition Height="9*"/>
+								</Grid.RowDefinitions>
+								<Label Content="Father"/>
+								<StackPanel Grid.Column="1" Orientation="Horizontal">
+									<Button Content=" ... " DataContext="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Father}" Click="ButtonChoiceMonsterType_Click"/>
+									<Label Content="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Father.Value, Converter={StaticResource MonsterTypeConverter}}"/>
+								</StackPanel>
+								<Label Grid.Row="1" Content="Mother"/>
+								<StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+									<Button Content=" ... " DataContext="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Mother}" Click="ButtonChoiceMonsterType_Click"/>
+									<Label Content="{Binding ElementName=ListBoxMemory, Path=SelectedItem.Mother.Value, Converter={StaticResource MonsterTypeConverter}}"/>
+								</StackPanel>
+								<Label Grid.Row="2" Content="GrandFather(F)"/>
+								<StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+									<Button Content=" ... " DataContext="{Binding ElementName=ListBoxMemory, Path=SelectedItem.GrandFather_F}" Click="ButtonChoiceMonsterType_Click"/>
+									<Label Content="{Binding ElementName=ListBoxMemory, Path=SelectedItem.GrandFather_F.Value, Converter={StaticResource MonsterTypeConverter}}"/>
+								</StackPanel>
+								<Label Grid.Row="3" Content="GrandMother(F)"/>
+								<StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+									<Button Content=" ... " DataContext="{Binding ElementName=ListBoxMemory, Path=SelectedItem.GrandMother_F}" Click="ButtonChoiceMonsterType_Click"/>
+									<Label Content="{Binding ElementName=ListBoxMemory, Path=SelectedItem.GrandMother_F.Value, Converter={StaticResource MonsterTypeConverter}}"/>
+								</StackPanel>
+								<Label Grid.Row="4" Content="GrandFather(M)"/>
+								<StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
+									<Button Content=" ... " DataContext="{Binding ElementName=ListBoxMemory, Path=SelectedItem.GrandFather_M}" Click="ButtonChoiceMonsterType_Click"/>
+									<Label Content="{Binding ElementName=ListBoxMemory, Path=SelectedItem.GrandFather_M.Value, Converter={StaticResource MonsterTypeConverter}}"/>
+								</StackPanel>
+								<Label Grid.Row="5" Content="GrandMother(M)"/>
+								<StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+									<Button Content=" ... " DataContext="{Binding ElementName=ListBoxMemory, Path=SelectedItem.GrandMother_M}" Click="ButtonChoiceMonsterType_Click"/>
+									<Label Content="{Binding ElementName=ListBoxMemory, Path=SelectedItem.GrandMother_M.Value, Converter={StaticResource MonsterTypeConverter}}"/>
+								</StackPanel>
+							</Grid>
+						</TabItem>
+					</TabControl>
+				</Grid>
+			</TabItem>
 		</TabControl>
 	</DockPanel>
 </Window>
