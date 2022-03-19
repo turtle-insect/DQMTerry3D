@@ -10,6 +10,7 @@ namespace DQMTerry3D
 	internal class Monster : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler? PropertyChanged;
+		public String Name { get; private set; }
 		public Number Type { get; private set; }
 
 		public Number Skill1 { get; private set; }
@@ -26,6 +27,7 @@ namespace DQMTerry3D
 		public Monster(uint address)
 		{
 			mAddress = address;
+			Name = Util.ReadName(address);
 			Type = new Number(address + 32, 2);
 			Skill1 = new Number(address + 222, 4);
 			Skill2 = new Number(address + 226, 4);
