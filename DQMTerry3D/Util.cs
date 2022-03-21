@@ -30,6 +30,34 @@ namespace DQMTerry3D
 				normal.Add(index + 13, ((Char)('A' + index)).ToString());
 				normal.Add(index + 39, ((Char)('a' + index)).ToString());
 			}
+			// 
+			var spell = new[]
+			{
+				new { index = 65, size = 4, value = "A",},
+				new { index = 69, size = 1, value = "C", },
+				new { index = 70, size = 4, value = "E", },
+				new { index = 74, size = 4, value = "I", },
+				new { index = 78, size = 1, value = "N", },
+				new { index = 79, size = 4, value = "O", },
+				new { index = 83, size = 1, value = "D", },
+				new { index = 84, size = 4, value = "U", },
+				new { index = 88, size = 4, value = "a",},
+				new { index = 92, size = 1, value = "c",},
+				new { index = 93, size = 4, value = "e",},
+				new { index = 97, size = 4, value = "i",},
+				new { index = 101, size = 1, value = "n",},
+				new { index = 102, size = 4, value = "o",},
+				new { index = 106, size = 1, value = "d",},
+				new { index = 107, size = 4, value = "u",},
+			};
+			foreach (var item in spell)
+			{
+				for (int index = 0; index < item.size; index++)
+				{
+					normal.Add(index + item.index, item.value);
+				}
+			}
+			// 空白
 			normal.Add(12, "　");
 			// ひらがな
 			// 濁点・半濁点は別
@@ -78,8 +106,9 @@ namespace DQMTerry3D
 				{0x19, "°"},
 				{0x07, "！"},
 				{0x08, "？"},
-				{0x03, "¡"},
 				{0x02, "¿"},
+				{0x03, "¡"},
+				{0x04, "b"},
 				{0x0a, "←"},
 				{0x0b, "↑"},
 				{0x0c, "→"},
