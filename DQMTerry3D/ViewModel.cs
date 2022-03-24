@@ -104,5 +104,10 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(0x1E564, 2); }
 			set { SaveData.Instance().WriteNumber(0x1E564, 2, value); }
 		}
+
+		public String Name
+		{
+			get { return Util.ReadName(0xC0); }
+		}
 	}
 }
