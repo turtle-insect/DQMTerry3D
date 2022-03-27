@@ -65,7 +65,7 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(mAddress + 40, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 40, 2, value, 1, 999);
+				Util.WriteNumber(mAddress + 40, 2, value, 1, 9999);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MaxHP)));
 			}
 		}
@@ -75,7 +75,7 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(mAddress + 42, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 42, 2, value, 0, 999);
+				Util.WriteNumber(mAddress + 42, 2, value, 0, 9999);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MaxMP)));
 			}
 		}
@@ -85,7 +85,7 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(mAddress + 44, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 44, 2, value, 0, 999);
+				Util.WriteNumber(mAddress + 44, 2, value, 0, 9999);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(HP)));
 			}
 		}
@@ -95,7 +95,7 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(mAddress + 46, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 46, 2, value, 0, 999);
+				Util.WriteNumber(mAddress + 46, 2, value, 0, 9999);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(MP)));
 			}
 		}
@@ -105,7 +105,7 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(mAddress + 48, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 48, 2, value, 0, 999);
+				Util.WriteNumber(mAddress + 48, 2, value, 0, 9999);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Offense)));
 			}
 		}
@@ -115,7 +115,7 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(mAddress + 50, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 50, 2, value, 0, 999);
+				Util.WriteNumber(mAddress + 50, 2, value, 0, 9999);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Defense)));
 			}
 		}
@@ -125,7 +125,7 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(mAddress + 52, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 52, 2, value, 0, 999);
+				Util.WriteNumber(mAddress + 52, 2, value, 0, 9999);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Speed)));
 			}
 		}
@@ -135,7 +135,7 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(mAddress + 54, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 54, 2, value, 0, 999);
+				Util.WriteNumber(mAddress + 54, 2, value, 0, 9999);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Wise)));
 			}
 		}
@@ -155,7 +155,7 @@ namespace DQMTerry3D
 			get { return SaveData.Instance().ReadNumber(mAddress + 72, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 72, 2, value, 0, 999);
+				Util.WriteNumber(mAddress + 72, 2, value, 0, 9999);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SkillPoint)));
 			}
 		}
