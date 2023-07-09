@@ -42,10 +42,10 @@ namespace DQMTerry3D
 
 		public uint Lv
 		{
-			get { return SaveData.Instance().ReadNumber(mAddress + 28, 1); }
+			get { return SaveData.Instance().ReadNumber(mAddress + 56, 1); }
 			set
 			{
-				Util.WriteNumber(mAddress + 28, 1, value, 1, 99);
+				Util.WriteNumber(mAddress + 56, 1, value, 1, 99);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Lv)));
 			}
 		}
