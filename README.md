@@ -1,3 +1,5 @@
+![DL Count](https://img.shields.io/github/downloads/turtle-insect/DQMTerry3D/total.svg)
+
 # 概要
 3DS ドラゴンクエストモンスターズ テリーのワンダーランド3Dのセーブデータ編集Tool
 
