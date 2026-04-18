@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DQMTerry3D
+﻿namespace DQMTerry3D
 {
 	internal class Info
 	{
